@@ -1,0 +1,7 @@
+name: PP
+title: PimPam
+version: '1.5'
+nav:
+- modules/ROOT/nav.adoc
+- modules/01_Úvod/nav.adoc
+- modules/02_Práce s PP/nav.adoc

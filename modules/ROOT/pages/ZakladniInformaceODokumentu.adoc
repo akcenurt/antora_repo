@@ -1,0 +1,45 @@
+:moduledir: ..
+:attachmentsdir: {moduledir}\attachments
+:examplesdir: {moduledir}\examples
+//alternativní imagesdir pro náhled při editaci
+//:imagesdir: {moduledir}\images
+:imagesdir: documentation-sim\modules\ROOT\images
+:partialsdir: {moduledir}\partials
+
+:table-caption!:
+
+== Základní informace o dokumentu
+
+=== Připravili
+
+* Martin Svinka
+* Roman Tyčka
+* Blanka Protrhlá
+* Prokop Dveře
+
+=== Pozměňovací návrhy
+
+[cols="1,1,4,1"]
+|===
+|Datum |Verze |Popis |Autor
+
+|1. 9. 2021
+|1.0.0.0
+|Základní verze
+|Prokop Dveře
+
+|8. 9. 2021
+|1.0.0.1
+a|Dokumentace již obsahuje i nějaký obsah.
+
+* menu
+* položky v něm
+|Martin Svinka
+
+|27. 9. 2021
+|1.0.0.1.1
+|Barva záhlaví změněna z nemoderní myší šedi na vojenskou šeď.
+|Martin Svinka
+|===
+
+Testovací dokumentace na náhodné téma, vytvořená čistě za účely interní prezentace a simulace možného využití dokumentačního nástroje Antora. Nebylo zamýšleno jakékoliv porušení autorských práv.

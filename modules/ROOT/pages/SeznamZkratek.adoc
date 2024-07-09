@@ -1,0 +1,26 @@
+:moduledir: ..
+:attachmentsdir: {moduledir}\attachments
+:examplesdir: {moduledir}\examples
+//alternativní imagesdir pro náhled při editaci
+//:imagesdir: {moduledir}\images
+:imagesdir: documentation-sim\modules\ROOT\images
+:partialsdir: {moduledir}\partials
+
+:table-caption!:
+
+== Seznam zkratek
+
+Zde bude seznam užitých zkratek. V seznamu. Zkratkovitě.
+
+[cols="1,4"]
+|===
+|Zkratka |Význam
+
+|km/h
+|kilometry za hodinu - jednotka rychlosti
+
+|hPa
+|hektopascal - jednotka atmosferického tlaku
+|===
+
+Testovací dokumentace na náhodné téma, vytvořená čistě za účely interní prezentace a simulace možného využití dokumentačního nástroje Antora. Nebylo zamýšleno jakékoliv porušení autorských práv.

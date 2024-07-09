@@ -1,0 +1,44 @@
+:moduledir: ..
+:attachmentsdir: {moduledir}\attachments
+:examplesdir: {moduledir}\examples
+//alternativní imagesdir pro náhled při editaci
+//:imagesdir: {moduledir}\images
+:imagesdir: documentation-sim\modules\01_Hlavni_stranka\images
+:partialsdir: {moduledir}\partials
+
+:table-caption!:
+
+== Úvod
+
+=== Informace o dokumentu
+
+Dokument obsahuje popis systému PIMPAM.
+
+*PIM/PAM (Privileged Identity Management a Privileged Access Management)
+jsou nástroje, které pomáhají s ochranou privilegovaných účtů a
+přístupem na kritické systémy infrastruktury.* Jsou schopny zajistit jak
+řízený přístup, tak monitorování aktivity správců a rotaci hesel
+privilegovaných účtů včetně analytických funkcí.
+
+=== Seznam zkratek a pojmů používaných v dokumentu
+
+.Tabulka 1 – Seznam použitých zkratek
+[width="100%",cols="^28%,^72%",]
+|===
+|*Zkratka* |*Význam*
+|PIM/PAM |Privileged Identity Management a Privileged Access Management
+|AD |Active Directory
+|RDP |Remote Desktop Protocol
+|SSH |Secure Shell
+|SSO |Single Sign On
+|TFA klíč |Two Factor Authentication
+|RSA klíč |Šifra s veřejným klíčem
+|DSA klíč |Digital Signature Algorithm
+|ECDSA klíč |Elliptic Curve Digital Signature Algorithm
+|EdDSA klíč |Edwards-curve Digital Signature Algorithm
+|Telnet |Teletype Network
+|VNC |Virtual Network Computing
+|IDM |Identity Management System
+|Externí ID |Vlastní přihlašovací údaj uživatele
+|ObjectSID |Security Identifier
+|===

@@ -1,0 +1,2 @@
+* xref:ZakladniInformaceODokumentu.adoc[O dokumentu]
+* xref:SeznamZkratek.adoc[Seznam zkratek]

@@ -1,0 +1,249 @@
+:moduledir: ..
+:attachmentsdir: {moduledir}\attachments
+:examplesdir: {moduledir}\examples
+//alternativní imagesdir pro náhled při editaci
+//:imagesdir: {moduledir}\images
+:imagesdir: documentation-sim\modules\02_Aktualne\images
+:partialsdir: {moduledir}\partials
+
+:table-caption!:
+
+== Práce se systémem
+
+=== Aplikace PIMPAM
+
+Aplikace PIMPAM umožňuje vzdálený přístup ke kritickým systémům
+infrastruktury pomocí privilegovaných účtů.
+
+Lze se díky ní na tyto systémy napojit přes vzdálenou plochu (RDP),
+Secure shell (SSH), Telnet, VNC (Virtual Network Computing) nebo spustit
+vzdálenou aplikaci (Remote Application).
+
+Všechna tato připojení jsou monitorována za pomocí videonahrávek a
+screenshotů, které jsou pořizovány po celou dobu, kdy je daný uživatel
+na vzdálený systém napojen.
+
+Pro započnutí tohoto připojení, je nutno v levém menu vybrat položku Mé
+autorizace a zde pravým tlačítkem kliknout na záznam služby, se kterou
+chce uživatel navázat spojení. Tímto dojde k navázání spojení se
+vzdáleným systémem a spustí nahrávání dané relace.
+
+Podrobnější informace o systému PIMPAM naleznete v následujících
+kapitolách.
+
+=== Přihlašovací obrazovka
+
+==== Přihlášení do aplikace PIMPAM
+
+Pro přihlášení do aplikace PIMPAM je potřeba vybrat z výklopného seznamu
+_Doménu_ a zadat _Uživatelské jméno_ a _Heslo_. V seznamu lze kromě
+implicitní lokální domény (PIMPAM), která je použita pro lokální účty
+aplikace PIMPAM, nalézt také ostatní domény (organizační), které byly
+vytvořeny v aplikaci PIMPAM. (viz. kapitola link:#_Domény[Domény]).
+
+.Obrázek 1 - Přihlášení do aplikace PIMPAM
+image::001.png[media/image1,width=480,height=354]
+
+Přihlášení do aplikace PIMPAM mají povoleny pouze účty, které se
+nacházejí ve stavu „Aktivní“.
+
+Po ověření zadaných údajů aplikace PIMPAM provede přihlášení daného
+uživatele. V případě, že je chybně zadán login, heslo nebo účet není
+v IDM aktivní, zobrazí aplikace upozornění. Příklad zobrazeného
+upozornění je uveden na následujícím obrázku.
+
+.Obrázek 2 - Příklad upozornění – Neúspěšné přihlášení do aplikace
+image::media/image2.png[Obsah obrázku text, snímek obrazovky, Písmo,
+software Popis byl vytvořen automaticky,width=480,height=391]
+
+Pokud je uživatel v systému Windows přihlášen pod účtem, který zároveň
+existuje i v aplikaci PIMPAM, může se přihlásit pomocí tlačítka
+„Přihlásit se pomocí SSO“, bez nutnosti zadání uživatelského jména a
+hesla.
+
+==== Dvoufázové ověření
+
+Pokud je v konfiguraci aplikace PIMPAM (viz. kapitola
+link:#_Konfigurace[Konfigurace]) zapnuto dvoufázové ověření, aplikace
+PIMPAM po zadání validních údajů uživateli zobrazí QR kód. Tento kód je
+následně nutno naskenovat v mobilní aplikaci Google Authenticator a
+zadat do pole „TFA klíč“. Tento klíč je pak třeba zadat po každém
+přihlašování do aplikace PIMPAM.
+
+.Obrázek 3 - Pole pro zadání klíče z aplikace Google Authenticator, po zadání validního jména a hesla
+image::media/image3.png[Obsah obrázku text, snímek obrazovky, Písmo,
+logo Popis byl vytvořen automaticky,width=421,height=319]
+
+=== Horní panel
+
+==== Změna jazyka
+
+V pravé části horního panelu se nachází rozbalovací menu pro přepínání
+mezi českým a anglickým jazykem.
+
+.Obrázek 4 – Rozbalovací menu změny jazyka
+image::media/image4.png[media/image4,width=610,height=125]
+
+==== Upozornění
+
+V horním menu se po kliknutí na ikonu bubliny rozevře seznam upozornění.
+Po kliknutí na upozornění je uživatel přesměrován na stránku, která se
+daného upozornění týká. Upozornění, které se zde mohou vyskytovat, se
+týkají:
+
+* Automatizovaných úkolů
+** Synchronizace s AD
+** Validace relací
+** Zpracování nahrávek
+* Workflow úkolů
+** Žádosti čekající na schválení
+** Schválení žádosti
+** Zamítnutí žádosti
+
+Po kliknutí na notifikaci se notifikace označí za přečtenou a odstraní
+se ze seznamu notifikací. Číslo v červeném kolečku udává počet
+notifikací, u kterých proklik neproběhl. Na konci seznamu se nachází
+tlačítko „Smazat upozornění“, které smaže veškerá upozornění, která se
+v seznamu aktuálně nachází.
+
+.Obrázek 5 - Rozbalovací seznam notifikací
+image::media/image5.png[media/image5,width=610,height=299]
+
+==== Menu uživatele
+
+Vedle upozornění se nachází ikonka panáčka. Po kliku na tuto ikonku se
+rozevře menu uživatele. V tomto menu lze u uživatelů v lokální doméně
+nalézt možnost změny hesla účtu daného uživatele.
+
+.Obrázek 6 - Rozbalovací menu uživatele
+image::media/image6.png[media/image6,width=604,height=299]
+
+===== Změna hesla uživatelského účtu
+
+Uživatel, který je přihlášen v aplikaci lokálním účtem, má možnost si
+změnit heslo po kliku na možnost „Změna hesla“ přes ikonku panáčka
+nahoře v liště.
+
+Pro úspěšnou změnu hesla je nutno zadat heslo staré a následně nové
+heslo, včetně jeho potvrzení.
+
+Změnu hesla lze provést po kliku na tlačítko „Uložit a zavřít“.
+
+.Obrázek 7 - Obrazovka změny hesla
+image::media/image7.png[media/image7,width=594,height=301]
+
+_*Upozornění:* Zmíněná změna hesla se nabízí pouze pro lokální účty
+v doméně PIMPAM. Změna hesel pro účty synchronizovaných z AD probíhá
+v AD._
+
+==== Odhlášení
+
+Jako poslední se v horním panelu nachází tlačítko odhlášení. Po kliku na
+toto tlačítko dojde k okamžitému odhlášení aktuálně přihlášeného
+uživatele a přesměrování zpět na úvodní obrazovku.
+
+.Obrázek 8 - Tlačítko odhlášení uživatele v horním panelu
+image::media/image8.png[media/image8,width=606,height=94]
+
+_*Upozornění:* Uživatel je automaticky odhlášen po 30 minutách
+neaktivity v aplikaci._
+
+=== Práce se záznamy
+
+==== Vyhledávání záznamů (filtrování)
+
+Vyhledávat lze v aplikaci PIMPAM zadáním požadovaného textu (nebo jeho
+části) do vyhledávacího pole, které se nachází pod názvem sloupce v dané
+tabulce. Zadaný textový řetězec není potřeba potvrzovat klávesou ENTER,
+filtrování proběhne okamžitě po zadání řetězce. V aplikaci existují dva
+typy filtrování:
+
+* Pomocí textového řetězce
+* Pomocí rozbalovacího menu
+
+.Obrázek 9 - Vyfiltrované záznamy v tabulce Uživatelé po zadání části textového řetězce ve sloupci Uživalské jméno
+image::media/image9.png[media/image9,width=597,height=301]
+
+image:media/image10.png[media/image10,width=580,height=295]
+
+Obrázek 10 - Vyfiltrování neaktivních záznamů v tabulce Uživatelé pomocí
+rozbalovacího menu ve sloupci Stav
+
+_*Upozornění:* Nelze filtrovat podle znaku podtržítka “_”._
+
+==== Řazení záznamů (třídění)
+
+V tabulkách lze také záznamy řadit podle abecedy vzestupně či sestupně.
+Toho lze dosáhnout poklikáním v hlavičce daného sloupce (ne do
+vyhledávacího pole).
+
+.Obrázek 11 - Řazení záznamů v tabulce Uživatelé ve sloupci Uživatelské jméno od A po Z
+image::media/image11.png[media/image11,width=603,height=301]
+
+==== Stránkování / Počet záznamů
+
+Při větším počtu záznamů v tabulkách aplikace PIMPAM lze přepínat mezi
+jednotlivými stránkami záznamů a volit jejich počet.
+
+.Obrázek 12 - Zleva – Počet zobrazených a celkových záznamů, zvolená stránka a počet záznamů na stránce
+image::media/image12.png[media/image12,width=609,height=308]
+
+==== Export záznamů
+
+Záznamy v tabulkách lze exportovat do souboru formátu .csv po kliku na
+ikonku stránky s nápisem CSV, která se nachází nad a pod danou tabulkou.
+
+.Obrázek 13 - Ikony pro export tabulky do formátu .csv
+image::media/image13.png[media/image13,width=602,height=303]
+
+==== Přidání / Odebrání záznamu
+
+V některých tabulkách aplikace lze do výčtu přidat / odebrat záznamy
+pomocí tlačítek Přidat / Odebrat. Po kliku na toto tlačítko je uživatel
+přesměrován na tabulku se záznamy, které lze do výčtu přidat / odebrat.
+V těchto tabulkách lze manipulovat se záznamy pomocí následujících
+tlačítek:
+
+* Přidat / Odebrat – Přidá / odebere záznam do výčtu záznamů v hlavní
+tabulce
+* Přidat a zavřít / Odebrat a zavřít – Přidá / odebere daný záznam a
+vrátí se zpět na hlavní tabulku
+* Přidat vše / Odebrat vše – Přidá / odebere všechny dostupné záznamy
+* Zavřít – Návrat zpět na hlavní tabulku
+
+image:media/image14.png[media/image14,width=603,height=301]
+
+Obrázek 14 - Tlačítka pro přidání / odebrání záznamů do tabulky
+
+.Obrázek 15 - Nabídka záznamů pro přidání (po kliku na tlačítko Přidat)
+image::media/image15.png[media/image15,width=598,height=304]
+
+==== Uložení záznamu
+
+Po vyplnění všech požadovaných atributů nového záznamu či úpravě ve
+formuláři záznamu již vytvořeného, můžu uživatel provedené změny uložit
+kliknutím na následující tlačítka:
+
+* Uložit – Uloží nově vytvořený záznam / úpravy v již vytvořeném záznamu
+* Uložit a zavřít – Uloží nově vytvořený záznam / úpravy v již
+vytvořeném záznamu a vrátí se na hlavní tabulku
+* Zavřít – Návrat na hlavní tabulku
+
+.Obrázek 16 - Tlačítka pro uložení nového / již existujícího záznamu
+image::media/image16.png[media/image16,width=604,height=304]
+
+=== Historizace
+
+____
+Změny v detailech záznamů entit jsou historizovány do příslušných
+tabulek v záložce Historie. Tyto záložky se nachází na všech detailech
+entit, kde je možno provést změny.
+
+Obrázek 17 - Příklad – záložka Historie na detailu entity Uživatel
+
+V této tabulce je možno taktéž rozkliknout požadovaný záznam k zobrazení
+podrobnějších informací o změně entity.
+
+Obrázek 18 - Příklad – detail položky Úprava záznamu v historii
+uživatele
+____
